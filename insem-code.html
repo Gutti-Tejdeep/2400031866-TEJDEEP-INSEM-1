@@ -11,20 +11,19 @@ function ClickEvent() {
     container: {
       textAlign: "center",
       marginTop: "50px",
-      fontFamily: "Arial, sans-serif"
+      fontFamily: "Arial"
     },
     button: {
-      backgroundColor: "#007bff",
+      backgroundColor: "white",
       color: "white",
       border: "none",
       padding: "10px 20px",
       borderRadius: "8px",
       cursor: "pointer",
-      fontSize: "16px",
-      transition: "background-color 0.3s"
+      fontSize: "16px"
     },
     buttonHover: {
-      backgroundColor: "#0056b3"
+      backgroundColor: "grey"
     }
   };
 
@@ -34,8 +33,8 @@ function ClickEvent() {
       <button
         style={styles.button}
         onClick={handleClick}
-        onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
-        onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+        onMouseOver={(e) => (e.target.style.backgroundColor = "blue")}
+        onMouseOut={(e) => (e.target.style.backgroundColor = "grey")}
       >
         Click Me
       </button>
