@@ -1,0 +1,47 @@
+import React, { useState } from "react";
+
+function ClickEvent() {
+  const [message, setMessage] = useState("Welcome! Click the button.");
+
+  const handleClick = () => {
+    setMessage("Button clicked! 🎉");
+    // or you can use alert("Button clicked!");
+  };
+
+  const styles = {
+    container: {
+      textAlign: "center",
+      marginTop: "50px",
+      fontFamily: "Arial, sans-serif"
+    },
+    button: {
+      backgroundColor: "#007bff",
+      color: "white",
+      border: "none",
+      padding: "10px 20px",
+      borderRadius: "8px",
+      cursor: "pointer",
+      fontSize: "16px",
+      transition: "background-color 0.3s"
+    },
+    buttonHover: {
+      backgroundColor: "#0056b3"
+    }
+  };
+
+  return (
+    <div style={styles.container}>
+      <h2>{message}</h2>
+      <button
+        style={styles.button}
+        onClick={handleClick}
+        onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
+        onMouseOut={(e) => (e.target.style.backgroundColor = "#007bff")}
+      >
+        Click Me
+      </button>
+    </div>
+  );
+}
+
+export default ClickEvent;
